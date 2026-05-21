@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.logo a:hover {
+  color: gray;
+}
+
+.nav-links a,
+.actions a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.actions a:hover {
+  color: gray;
+}
+
+
+.nav-links,
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Banner com vídeo */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #fff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Banner secundário com imagem */
+.banner-secundario {
+  background: url('masculino-banner.webp') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.banner-secundario .banner-text {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.banner-secundario h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner-secundario p {
+  font-size: 1.2rem;
+}
+
+/* Seção de produtos */
+.produtos-destaque {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.produtos-destaque h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.produto-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.produto-card-masculino {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.produto-card-masculino:hover {
+  transform: translateY(-5px);
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+}
+
+.produto-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.produto-card-masculino img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.produto-card h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+.produto-card-masculino h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.produto-card p {
+  color: #ccc;
+}
+.produto-card-masculino p {
+  color: #ccc;
+}
+
+.add-to-cart {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3 ease;
+}
+
+.add-to-cart:hover {
+  background-color: #ccc;
+}
+
+/* CARRINHO */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100%;
+  background-color: #111;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#close-cart {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cart-footer {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 1rem;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: white;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #ccc;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  rgba(0, 0, 0, 0.5);
+  z-index: 1.2;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item img.item-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item .remove-btn {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* MENSAGEM */
+.notificacao {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #7f7f7f;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.notificacao.show {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #000;
+
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .produto-card {
+    width: 180px;
+  }
+
+  .produtos {
+    gap: 1.5rem;
+  }
+}
+
+/* MENU-HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-actions {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mobile-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ /* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+  }
+}
+
+  .banner {
+    height: 95vh; 
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+

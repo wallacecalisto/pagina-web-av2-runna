@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="Icon"
+      type="image/png"
+      href="imagens-videos/Icone-logo/android-chrome-512x512.png"
+    />
+    <title>Runna</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="logo"><a href="html/sobre.html">Runna</a></nav>
+
+      <!-- MENU-RESPONSIVO -->
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <!-- MENU-RESPONSIVO -->
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Início</a>
+        <a href="html/masculino.html">Masculino</a>
+        <a href="html/feminino.html">Feminino</a>
+        <a href="html/equipamentos.html">Equipamentos</a>
+        <a href="html/contato.html">Contato</a>
+
+        <!-- MENU-RESPONSIVO -->
+        <div class="mobile-actions">
+          <a href="html/login.php">Login</a>
+          <a href="#" class="cart-icon">🛒</a>
+        </div>
+      </nav>
+
+      <div class="actions">
+        <a href="html/login.php">Login</a>
+        <a href="#" class="cart-icon">🛒</a>
+      </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+      <video autoplay muted loop class="banner-video">
+        <source
+          src="imagens-videos/index/FIND YOUR PASSION ｜ Nike Spec Ad ｜ Sony A6400.mp4"
+          type="video/webm"
+        />
+        Seu navegador não suporta vídeo.
+      </video>
+      <div class="banner-text">
+        <h1>Runna viva o movimento</h1>
+        <p>
+          Não importa o destino, só o ritmo. A Runna te veste para cada momento
+          da aventura.
+        </p>
+        <a href="html/coleção.html" class="btn">Novidades</a>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="produtos-destaque">
+      <h2>Destaques</h2>
+      <div class="produtos">
+        <div class="produto-card">
+          <img
+            src="imagens-videos/index/Jaqueta Nike Sportswear Club Puffer Masculina.avif"
+            alt="Jaqueta Nike Sportswear Club Puffer Masculina"
+          />
+          <h3>Jaqueta Nike Sportswear</h3>
+          <p>R$ 1200,90</p>
+          <button
+            class="add-to-cart"
+            data-nome="Jaqueta Nike Sportwear"
+            data-preco="1200.90"
+            data-img="imagens-videos/index/Jaqueta Nike Sportswear Club Puffer Masculina.avif"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+        <div class="produto-card">
+          <img
+            src="imagens-videos/index/nike dunk low retro.avif"
+            alt="Nike Dunk Low Retro"
+          />
+          <h3>Nike Dunk Low Retro</h3>
+          <p>R$ 899,90</p>
+          <button
+            class="add-to-cart"
+            data-nome="Nike Low Retro"
+            data-preco="899.90"
+            data-img="imagens-videos/index/nike dunk low retro.avif"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+        <div class="produto-card">
+          <img
+            src="imagens-videos/index/Mochila Nike Brasilia.avif"
+            alt="Mochila Nike Brasilia"
+          />
+          <h3>Mochila Nike Brasilia</h3>
+          <p>R$ 228,90</p>
+          <button
+            class="add-to-cart"
+            data-nome="Mochila Nike Brasilia"
+            data-preco="228.90"
+            data-img="imagens-videos/index/Mochila Nike Brasilia.avif"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--SIDEBAR DO CARRINHO-->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Seu Carrinho</h2>
+        <button id="close-cart">X</button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <p>Seu carrinho está vazio.</p>
+      </div>
+      <div class="cart-footer">
+        <p>Total:<span id="cart-total">R$ 0,00</span></p>
+        <button class="checkout-btn">Finalizar compra</button>
+      </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div id="notificacao" class="notificacao">
+      Produto adicionado ao carrinho!
+    </div>
+    <footer>
+      <p>&copy; Runna</p>
+    </footer>
+    <script src="javascrip/javascript.js"></script>
+  </body>
+</html>

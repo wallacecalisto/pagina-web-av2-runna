@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo a:hover {
+    color: gray;
+}
+
+.nav-links a,
+.actions a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.actions a:hover {
+    color: gray;
+}
+
+
+.nav-links,
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    top: 70px;
+}
+
+.inicio {
+    text-align: center;
+}
+
+.linhadotempo {
+    position: relative;
+    width: 30%;
+    left: 25%;
+
+}
+
+/* add linha no meio */
+.linhadotempo::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(20, 126, 219);
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    margin-left: -3px;
+    
+}
+
+.esquerda {
+    position: relative;
+    left: 40%;
+}
+
+.direita {
+    position: relative;
+    left: 110%;
+}
+
+/*add flecha */
+.esquerda::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 45%;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.direita::before {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: -20px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/*add circulo esquerda */
+.circulo {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    background-color: rgb(185, 158, 158);
+    border: 2px red;
+    color: #000;
+    border-radius: 20%;
+}
+
+.circulo::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -25%;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+
+
+/*add circulo direita*/
+.circulo2 {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    background-color: rgb(185, 158, 158);
+    border: 2px red;
+    color: #000;
+    border-radius: 20%;
+}
+
+
+.circulo2::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 115%;
+    background-color: white;
+    border: 4px solid #1e0ff1;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #000;
+    position: relative;
+    bottom: 120%;
+}

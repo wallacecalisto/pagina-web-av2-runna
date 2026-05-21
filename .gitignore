@@ -1,0 +1,8 @@
+# Mídias pesadas (vídeos e imagens — não versionadas pelo GitHub)
+imagens-videos/
+
+# Dependências PHP (geradas pelo Composer)
+vendor/
+
+# Variáveis de ambiente (credenciais)
+.env
